@@ -6,7 +6,7 @@
 
 ---
 
-(Here will be Mephisto's logo, stay tuned :>)
+![Mephisto Logo](assets/mephisto-logo.png)
 
 **Mephisto** is an innovative, user-friendly IDE designed to unlock the mysteries of modern processor architectures. Created with a learning-first approach, Mephisto helps enthusiasts, students, and engineers dive deep into **RISC**, **CISC**, and **VLIW** architectures through hands-on exploration and interactive tools.
 
@@ -37,6 +37,7 @@ Processor architectures drive the tech world, but mastering them can feel like t
 
 ## Getting Started 🚀
 
+### Building from Scratch
 1. **Clone the Repository**  
     ```bash
     git clone https://github.com/yourusername/Mephisto.git
@@ -52,6 +53,15 @@ Processor architectures drive the tech world, but mastering them can feel like t
     ```bash
     python3 gui/main.py
     ```
+
+### Using Shell Script (for Linux)
+
+For Linux users you can use the `run.sh` script to perform automatic build.
+```bash
+sudo chmod +x run.sh
+./run.sh
+```
+This will clean you build directory and re-compile the project with launch following.
 
 ---
 
