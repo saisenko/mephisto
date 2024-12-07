@@ -58,8 +58,8 @@ Processor architectures drive the tech world, but mastering them can feel like t
 
 For Linux users you can use the `run.sh` script to perform automatic build.
 ```bash
-sudo chmod +x run.sh
-./run.sh
+sudo chmod +x run_mephisto.sh
+./run_mephisto.sh
 ```
 This will clean you build directory and re-compile the project with launch following.
 

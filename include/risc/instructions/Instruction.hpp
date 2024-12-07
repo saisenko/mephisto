@@ -1,15 +1,17 @@
 #ifndef instruction_hpp
 #define instruction_hpp
 
-#include <stdint.h>
+#include <cstdint>
 #include <string>
 
 class Instruction {
 protected:
-    uint32_t opcode;
-    uint32_t binary;
+    uint32_t opcode, binary;
 public:
-    Instruction(uint32_t binary) : binary(binary) {}
+    explicit Instruction(uint32_t binary) : binary(binary)
+    {
+        this->opcode = (binary >> 10) & 0b1111111;
+    }
 
     virtual void decode() = 0;
     virtual std::string to_mnemonic() = 0;

@@ -3,7 +3,8 @@ from editor import CodeEditor
 
 def main():
     root = Tk()
-    root.title("My Python Code Editor")
+    root.title("Mephisto | RISC-V IDE")
+    root.iconbitmap("assets/mephisto-logo-rounded.ico")
     editor = CodeEditor(root)
     root.mainloop()
 
