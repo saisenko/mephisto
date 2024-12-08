@@ -101,7 +101,7 @@ class MainScreen(BoxLayout):
         """
         # File Open Popup
         content = BoxLayout(orientation="vertical")
-        filechooser = FileChooser()
+        filechooser = FileChooserListView(path=".", size_hint=(1, 0.9))
         content.add_widget(filechooser)
         
         def select_file(*_):
