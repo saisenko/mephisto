@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1220</width>
+    <height>593</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Mephisto | RISC-V IDE</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>10</y>
+      <width>611</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="navbar">
+     <item>
+      <widget class="QPushButton" name="openFileBtn">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+         <strikeout>false</strikeout>
+        </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0,0,0);
+color: rgb(255, 255, 255);
+
+border-radius: 15px;</string>
+       </property>
+       <property name="text">
+        <string>Open File</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveFileBtn">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0,0,0);
+color: rgb(255, 255, 255);
+
+border-radius: 15px;</string>
+       </property>
+       <property name="text">
+        <string>Save File</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="runBtn">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0,0,0);
+color: rgb(255, 255, 255);
+
+border-radius: 15px;</string>
+       </property>
+       <property name="text">
+        <string>Run</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="debugBtn">
+       <property name="font">
+        <font>
+         <pointsize>16</pointsize>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(0,0,0);
+color: rgb(255, 255, 255);
+
+border-radius: 15px;</string>
+       </property>
+       <property name="text">
+        <string>Debug</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTextEdit" name="codeEditor">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>70</y>
+      <width>551</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Your ASM (RISC-V) code here...</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>20</y>
+      <width>441</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="data">
+     <item>
+      <layout class="QHBoxLayout" name="regsData">
+       <item>
+        <widget class="QTableWidget" name="regsData1">
+         <row>
+          <property name="text">
+           <string>x0</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x1</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x2</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x3</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x4</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x5</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x6</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x7</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>data</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="regsData2">
+         <row>
+          <property name="text">
+           <string>x8</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x9</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x10</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x11</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x12</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x13</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x14</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x15</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>data</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="regsData3">
+         <row>
+          <property name="text">
+           <string>x16</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x17</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x18</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x19</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x20</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x21</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x22</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x23</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>data</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="regsData4">
+         <row>
+          <property name="text">
+           <string>x24</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x25</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x26</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x27</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x28</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x29</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x30</string>
+          </property>
+         </row>
+         <row>
+          <property name="text">
+           <string>x31</string>
+          </property>
+         </row>
+         <column>
+          <property name="text">
+           <string>data</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QListWidget" name="memData"/>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QPlainTextEdit" name="textOutput">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>400</y>
+      <width>551</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Here will be the program output...</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

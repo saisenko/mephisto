@@ -1,0 +1,12 @@
+# ninja log v6
+4	489	7570242945360315	mephisto_autogen/timestamp	a69695d15c7f6a6f
+4	489	7570242945360315	mephisto_autogen/mocs_compilation.cpp	a69695d15c7f6a6f
+4	489	7570242945360315	mephisto_autogen/include/ui_mainwindow.h	a69695d15c7f6a6f
+4	489	7570242945360315	C:/Users/eugen/Desktop/mephisto/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/mephisto_autogen/timestamp	a69695d15c7f6a6f
+4	489	7570242945360315	C:/Users/eugen/Desktop/mephisto/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/mephisto_autogen/mocs_compilation.cpp	a69695d15c7f6a6f
+4	489	7570242945360315	C:/Users/eugen/Desktop/mephisto/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/mephisto_autogen/include/ui_mainwindow.h	a69695d15c7f6a6f
+503	1574	7570242945884272	CMakeFiles/mephisto.dir/src/risc/memory/Registers.cpp.obj	a5ac22f24bfad013
+493	2060	7570242945782373	CMakeFiles/mephisto.dir/mephisto_autogen/mocs_compilation.cpp.obj	ff7344bcb275f042
+496	2091	7570242945804264	CMakeFiles/mephisto.dir/main.cpp.obj	9b3f964a33c36c87
+500	3232	7570242945804264	CMakeFiles/mephisto.dir/mainwindow.cpp.obj	412e21f87e75cd87
+3232	3523	7570242973173876	mephisto.exe	63c5714d9d97a4c5
