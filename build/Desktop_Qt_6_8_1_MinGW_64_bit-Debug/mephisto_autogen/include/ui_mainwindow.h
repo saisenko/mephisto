@@ -10,6 +10,7 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
@@ -71,7 +72,16 @@ public:
         openFileBtn->setStyleSheet(QString::fromUtf8("background-color: rgb(0,0,0);\n"
 "color: rgb(255, 255, 255);\n"
 "\n"
-"border-radius: 15px;"));
+"border-radius: 15px;\n"
+"\n"
+"QPushButton {\n"
+"	qpoperty-icon: url(:/assets/OpenFile.png);\n"
+"	qproperty-iconSize: 32px 32px;\n"
+"	text-align: center;\n"
+"}"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("assets/OpenFile.ico"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        openFileBtn->setIcon(icon);
         openFileBtn->setIconSize(QSize(32, 32));
 
         navbar->addWidget(openFileBtn);
@@ -86,6 +96,9 @@ public:
 "color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 15px;"));
+        QIcon icon1;
+        icon1.addFile(QString::fromUtf8("assets/SaveFile.ico"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        saveFileBtn->setIcon(icon1);
         saveFileBtn->setIconSize(QSize(32, 32));
 
         navbar->addWidget(saveFileBtn);
@@ -101,6 +114,9 @@ public:
 "color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 15px;"));
+        QIcon icon2;
+        icon2.addFile(QString::fromUtf8("assets/Run.ico"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        runBtn->setIcon(icon2);
         runBtn->setIconSize(QSize(32, 32));
 
         navbar->addWidget(runBtn);
@@ -112,6 +128,9 @@ public:
 "color: rgb(255, 255, 255);\n"
 "\n"
 "border-radius: 15px;"));
+        QIcon icon3;
+        icon3.addFile(QString::fromUtf8("assets/Debug.ico"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        debugBtn->setIcon(icon3);
         debugBtn->setIconSize(QSize(32, 32));
 
         navbar->addWidget(debugBtn);

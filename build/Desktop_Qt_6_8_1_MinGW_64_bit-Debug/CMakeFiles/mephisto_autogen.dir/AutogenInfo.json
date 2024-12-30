@@ -302,9 +302,39 @@
 			null
 		],
 		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Andi.h",
+			"MU",
+			"FQYN6VNEAV/moc_Andi.cpp",
+			null
+		],
+		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Ori.h",
+			"MU",
+			"FQYN6VNEAV/moc_Ori.cpp",
+			null
+		],
+		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Slli.h",
+			"MU",
+			"FQYN6VNEAV/moc_Slli.cpp",
+			null
+		],
+		[
 			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Slti.h",
 			"MU",
 			"FQYN6VNEAV/moc_Slti.cpp",
+			null
+		],
+		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Srli.h",
+			"MU",
+			"FQYN6VNEAV/moc_Srli.cpp",
+			null
+		],
+		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Xori.h",
+			"MU",
+			"FQYN6VNEAV/moc_Xori.cpp",
 			null
 		],
 		[
@@ -314,15 +344,51 @@
 			null
 		],
 		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/And.h",
+			"MU",
+			"W4D63KQ3H5/moc_And.cpp",
+			null
+		],
+		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Or.h",
+			"MU",
+			"W4D63KQ3H5/moc_Or.cpp",
+			null
+		],
+		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Sll.h",
+			"MU",
+			"W4D63KQ3H5/moc_Sll.cpp",
+			null
+		],
+		[
 			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Slt.h",
 			"MU",
 			"W4D63KQ3H5/moc_Slt.cpp",
 			null
 		],
 		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Srl.h",
+			"MU",
+			"W4D63KQ3H5/moc_Srl.cpp",
+			null
+		],
+		[
 			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Sub.h",
 			"MU",
 			"W4D63KQ3H5/moc_Sub.cpp",
+			null
+		],
+		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Xor.h",
+			"MU",
+			"W4D63KQ3H5/moc_Xor.cpp",
+			null
+		],
+		[
+			"C:/Users/eugen/Desktop/mephisto/include/risc/memory/Memory.h",
+			"MU",
+			"JOVKAQXWRJ/moc_Memory.cpp",
 			null
 		],
 		[
@@ -411,6 +477,11 @@
 	[
 		[ "C:/Users/eugen/Desktop/mephisto/main.cpp", "MU", null ],
 		[ "C:/Users/eugen/Desktop/mephisto/mainwindow.cpp", "MU", null ],
+		[
+			"C:/Users/eugen/Desktop/mephisto/src/risc/memory/Memory.cpp",
+			"MU",
+			null
+		],
 		[
 			"C:/Users/eugen/Desktop/mephisto/src/risc/memory/Registers.cpp",
 			"MU",

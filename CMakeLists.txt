@@ -22,6 +22,8 @@ set(PROJECT_SOURCES
 
         include/risc/memory/Registers.h
         src/risc/memory/Registers.cpp
+        include/risc/memory/Memory.h
+        src/risc/memory/Memory.cpp
 
         include/risc/instructions/Instruction.h
         include/risc/instructions/RTypeInstruction.h
@@ -30,9 +32,19 @@ set(PROJECT_SOURCES
         include/risc/instructions/r_type/Add.h
         include/risc/instructions/r_type/Slt.h
         include/risc/instructions/r_type/Sub.h
+        include/risc/instructions/r_type/And.h
+        include/risc/instructions/r_type/Or.h
+        include/risc/instructions/r_type/Xor.h
+        include/risc/instructions/r_type/Sll.h
+        include/risc/instructions/r_type/Srl.h
 
         include/risc/instructions/i_type/Addi.h
         include/risc/instructions/i_type/Slti.h
+        include/risc/instructions/i_type/Andi.h
+        include/risc/instructions/i_type/Ori.h
+        include/risc/instructions/i_type/Xori.h
+        include/risc/instructions/i_type/Slli.h
+        include/risc/instructions/i_type/Srli.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

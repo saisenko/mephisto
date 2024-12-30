@@ -545,14 +545,26 @@ mephisto_autogen/timestamp: \
 	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/Instruction.h \
 	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/RTypeInstruction.h \
 	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Addi.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Andi.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Ori.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Slli.h \
 	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Slti.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Srli.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/i_type/Xori.h \
 	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Add.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/And.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Or.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Sll.h \
 	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Slt.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Srl.h \
 	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Sub.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/instructions/r_type/Xor.h \
+	C:/Users/eugen/Desktop/mephisto/include/risc/memory/Memory.h \
 	C:/Users/eugen/Desktop/mephisto/include/risc/memory/Registers.h \
 	C:/Users/eugen/Desktop/mephisto/main.cpp \
 	C:/Users/eugen/Desktop/mephisto/mainwindow.cpp \
 	C:/Users/eugen/Desktop/mephisto/mainwindow.h \
+	C:/Users/eugen/Desktop/mephisto/src/risc/memory/Memory.cpp \
 	C:/Users/eugen/Desktop/mephisto/src/risc/memory/Registers.cpp \
 	C:/Users/eugen/Desktop/mephisto/mainwindow.ui \
 	C:/Program\ Files/CMake/bin/cmake.exe

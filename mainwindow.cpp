@@ -9,6 +9,7 @@
 
 
 #include "include/risc/memory/Registers.h"
+#include "include/risc/memory/Memory.h"
 #include "include/risc/instructions/Instruction.h"
 #include "include/risc/InstructionFactory.h"
 
@@ -118,22 +119,43 @@ QStringList process_operands(const QStringList operands) {
         QString el = operands[i];
         if (el.startsWith('x')) {
             el.remove("x");
+            updated_operands << el;
+        } else if (el.contains("(")) {
+            el.remove(")");
+            QStringList split_el = el.split("(");
+            split_el[1].remove("x");
+            updated_operands << split_el[0];
+            updated_operands << split_el[1];
+        } else {
+            updated_operands << el;
         }
-        updated_operands << el;
     }
     updated_operands.removeFirst();
 
     return updated_operands;
 }
 
-void execute_instructions(const QList<QStringList>& instructions, Registers& regs) {
+QStringList execute_instructions(const QList<QStringList>& instructions, Registers& regs) {
+    QStringList binaries;
     for (const QStringList& components : instructions) {
         QString name = components[0];
         QStringList operands = process_operands(components);
 
         Instruction* instruction = InstructionFactory::createInstruction(name, operands);
         instruction->execute(regs);
+
+        QString binary = instruction->encode_to_binary();
+        QString part1 = binary.mid(0, 8);
+        QString part2 = binary.mid(8, 8);
+        QString part3 = binary.mid(16, 8);
+        QString part4 = binary.mid(24, 8);
+
+        binaries << part1;
+        binaries << part2;
+        binaries << part3;
+        binaries << part4;
     }
+    return binaries;
 }
 
 void MainWindow::on_runBtn_clicked()
@@ -160,8 +182,9 @@ void MainWindow::on_runBtn_clicked()
         qDebug() << instruction.join(" ");
     }
 
+    Memory mem;
     Registers regs;
-    execute_instructions(updated_line_components, regs);
+    QStringList bins = execute_instructions(updated_line_components, regs);
 
     QList<int> regs_data = regs.get_all_regs_data();
     for (int i = 0; i < 32; i++) {
@@ -184,5 +207,21 @@ void MainWindow::on_runBtn_clicked()
         if (current_table) {
             current_table->setItem(row_index, 0, new QTableWidgetItem(QString::number(regs_data[i])));
         }
+
+        uint16_t address = 0x0000;
+        for (QString& el : bins) {
+            QString addressStr = QString("%1").arg(address, 4, 16, QChar('0')).toUpper();
+
+            // Concatenate the address and binary data
+            QString displayText = addressStr + ": " + el;
+
+            // Add the item to the widget
+            ui->memData->addItem(displayText);
+
+            // Increment the address by 8 (each part is 8 bits)
+            address += 0x0008;
+        }
+
+        ui->textOutput->document()->setPlainText("Program executed successfully");
     }
 }
