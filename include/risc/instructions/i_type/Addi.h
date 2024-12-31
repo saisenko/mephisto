@@ -15,7 +15,7 @@ public:
 
     void execute(Registers& regs) override {
         uint32_t data1 = regs.fetch_from_reg(rs1);
-        uint32_t res =  data1 + static_cast<int16_t>(imm);
+        uint32_t res = (rd != 0) ? data1 + static_cast<int16_t>(imm): 0;
 
         regs.write_to_reg(rd, res);
     }
